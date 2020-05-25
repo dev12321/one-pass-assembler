@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <title>One pass assembler</title>
   </head>
   <body class="bg-gray-100">
@@ -21,8 +24,8 @@
         </button>
       </div>
       <div class="flex flex-col">
-        <div class="grid grid-cols-12 gap-5 mx-16">
-          <div class="flex flex-col col-span-8">
+        <div class="grid md:grid-cols-12 gap-5 mx-5 md:mx-16">
+          <div class="flex flex-col md:col-span-8">
             <div>Input Code</div>
             <div>
               <textarea
@@ -32,7 +35,7 @@
               ></textarea>
             </div>
           </div>
-          <div class="flex flex-col col-span-4">
+          <div class="flex flex-col md:col-span-4">
             <div>opTab</div>
             <div>
               <textarea
@@ -57,7 +60,7 @@
           >
             RESULT
           </div>
-          <div class="mx-16 flex justify-center">
+          <div class="mx-5 md:mx-16 flex justify-center">
             <div class="w-full">
               <div>Output</div>
               <div>
@@ -78,7 +81,10 @@
               Show/Hide more details
             </button>
           </div>
-          <div id="show-more" class="grid grid-cols-3 mx-16 gap-5 mb-16 hidden">
+          <div
+            id="show-more"
+            class="grid md:grid-cols-3 mx-5 md:mx-16 gap-5 mb-16 hidden"
+          >
             <div>
               <div>symTab</div>
               <div>
