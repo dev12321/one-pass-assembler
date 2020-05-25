@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>One pass assembler</title>
+  </head>
+  <body class="bg-gray-100">
+    <header class="py-5 bg-gray-900 text-white flex justify-center">
+      <div class="text-xl">One Pass assembler</div>
+    </header>
+    <div class="w-full flex flex-col justify-center">
+      <div class="flex mt-5 justify-center">
+        <button
+          class="bg-gray-900 text-white rounded py-1 px-8"
+          onclick="handleLoad()"
+        >
+          Load Example
+        </button>
+      </div>
+      <div class="flex flex-col">
+        <div class="grid grid-cols-12 gap-5 mx-16">
+          <div class="flex flex-col col-span-8">
+            <div>Input Code</div>
+            <div>
+              <textarea
+                class="w-full p-3 shadow whitespace-pre-wrap"
+                rows="12"
+                id="inputCode"
+              ></textarea>
+            </div>
+          </div>
+          <div class="flex flex-col col-span-4">
+            <div>opTab</div>
+            <div>
+              <textarea
+                class="w-full p-3 shadow"
+                rows="6"
+                id="opTab"
+              ></textarea>
+            </div>
+            <div class="my-5">
+              <button
+                class="bg-gray-900 text-white rounded py-2 text-lg px-8 w-full shadow"
+                onclick="handleSubmit()"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="result-section" class="hidden">
+          <div
+            class="border-t border-b py-2 text-2xl font-semibold my-16 text-center"
+          >
+            RESULT
+          </div>
+          <div class="mx-16 flex justify-center">
+            <div class="w-full">
+              <div>Output</div>
+              <div>
+                <textarea
+                  rows="8"
+                  class="w-full p-3 shadow"
+                  id="output"
+                  readonly=""
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center my-16">
+            <button
+              class="bg-gray-900 text-white rounded py-2 text-lg px-8 shadow"
+              onclick="handleShowMore()"
+            >
+              Show/Hide more details
+            </button>
+          </div>
+          <div id="show-more" class="grid grid-cols-3 mx-16 gap-5 mb-16 hidden">
+            <div>
+              <div>symTab</div>
+              <div>
+                <textarea
+                  rows="8"
+                  class="w-full p-3 shadow"
+                  id="symTab"
+                  readonly=""
+                ></textarea>
+              </div>
+            </div>
+            <div>
+              <div>symTab1</div>
+              <div>
+                <textarea
+                  rows="8"
+                  class="w-full p-3 shadow"
+                  id="symTab1"
+                  readonly=""
+                ></textarea>
+              </div>
+            </div>
+            <div>
+              <div>Result</div>
+              <div>
+                <textarea
+                  rows="8"
+                  class="w-full p-3 shadow"
+                  id="result"
+                  readonly=""
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
